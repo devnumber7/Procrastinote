@@ -32,7 +32,6 @@ struct SaveFeedbackView: View {
             .shadow(radius: 4)
             .transition(.move(edge: .top).combined(with: .opacity))
             .onAppear {
-                // On show: provide success haptic feedback and automatically dismiss after 1 second.
                 let generator = UINotificationFeedbackGenerator()
                 generator.notificationOccurred(.success)
 

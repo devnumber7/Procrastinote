@@ -33,6 +33,8 @@ struct TaskListView: View {
     @State private var selectedTask: TaskItem? = nil
     /// Controls presentation of the add-task sheet.
     @State private var showAddSheet = false
+    
+    @State private var taskToAddToCalendar : TaskItem? = nil
 
     /// Tasks grouped by their optional `Category`, sorted by category name.
     ///
@@ -48,6 +50,19 @@ struct TaskListView: View {
             return lhsName < rhsName
         }
     }
+    
+    
+    private func addTaskToCalendar(_ task: TaskItem) {
+        Task {
+            do {
+                let id = try await CalendarWriter.addTaskToCalendar(task)
+                task.eventIdentifier = id
+                try? context.save()
+            } catch {
+                print("Calendar write failed: \(error)")
+            }
+        }
+    }
 
     /// The main content view.
     ///
@@ -55,6 +70,7 @@ struct TaskListView: View {
     /// actions for adding tasks and clearing completed ones, edit and toggle
     /// gestures per row, confirmation alerts, and sheets for add/edit flows.
     var body: some View {
+        
         NavigationStack {
             List {
                 ForEach(groupedTasks, id: \.key?.id) { group in
@@ -69,9 +85,8 @@ struct TaskListView: View {
                                 }
                             )
                             .swipeActions(edge: .trailing , allowsFullSwipe: false){
-                                Button {
-                                    selectedTask = task
-                                } label : {
+                                Button { selectedTask = task }
+                                label : {
                                     Label("Edit", systemImage: "pencil")
                                 }
                                 .tint(.blue)
@@ -83,6 +98,11 @@ struct TaskListView: View {
                                     Label("Delete", systemImage: "trash")
                                 }
                                 
+                                Button {  taskToAddToCalendar = task }
+                                label: {
+                                    Label("Add to Calendar", systemImage: "calendar.badge.plus")
+                                }
+                                .tint(.orange)
                             }
                         }
                     }
@@ -131,6 +151,9 @@ struct TaskListView: View {
                 )
                 .padding(.top, 8)
             }
+        }
+        .sheet(item: $taskToAddToCalendar){ task in
+            EventEditSheet(task: task)
         }
     }
 

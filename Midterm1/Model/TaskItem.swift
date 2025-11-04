@@ -11,6 +11,11 @@ import SwiftData
 
 @Model
 final class TaskItem: Identifiable {
+    
+
+    typealias Time = Double
+    
+    
     @Attribute(.unique) var id: UUID
     var title: String
     var detail: String?
@@ -18,12 +23,14 @@ final class TaskItem: Identifiable {
     var estimatedTime: Double
     var status: TaskStatus
     var category: Category?
+    
+    var eventIdentifier : String?
 
     init(
         title: String,
         detail: String? = nil,
         dueDate: Date,
-        estimatedTime: Double,
+        estimatedTime: Time,
         category: Category? = nil,
         status: TaskStatus = .notStarted
     ) {
