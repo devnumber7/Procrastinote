@@ -5,7 +5,7 @@ Track your progress, visualize productivity, and stay accountable.
 
 ---
 
-## 📱 Features
+## Features
 
 ### Task Management
 - Create, edit, and organize tasks by **category**  
@@ -27,7 +27,7 @@ Track your progress, visualize productivity, and stay accountable.
 
 ---
 
-## 🧠 Technologies
+## Technologies
 | Framework | Usage |
 |------------|--------|
 | **SwiftUI 18** | Declarative UI and animations |
