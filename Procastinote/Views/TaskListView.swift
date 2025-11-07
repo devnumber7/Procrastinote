@@ -7,6 +7,7 @@
 /// - Edit existing tasks
 /// - Toggle completion state
 /// - Delete tasks individually or clear all completed tasks
+/// - Add tasks as event to the Calender
 ///
 /// The view also shows a transient feedback banner after clearing completed tasks.
 
@@ -33,7 +34,7 @@ struct TaskListView: View {
     @State private var selectedTask: TaskItem? = nil
     /// Controls presentation of the add-task sheet.
     @State private var showAddSheet = false
-    
+    /// Controls the presentation of EventKitUI in the sheet UI.
     @State private var taskToAddToCalendar : TaskItem? = nil
 
     /// Tasks grouped by their optional `Category`, sorted by category name.

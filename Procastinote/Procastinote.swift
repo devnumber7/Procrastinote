@@ -20,7 +20,7 @@ import SwiftData
 /// Both models are registered with the shared `.modelContainer` so instances are
 /// stored on device and automatically loaded across app launches.
 @main
-struct Midterm1App: App {
+struct Procastinote: App {
 
 
     var body: some Scene {

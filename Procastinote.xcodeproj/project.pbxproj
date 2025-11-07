@@ -6,14 +6,66 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BEC25FE72EBDD1D700EC8A3D /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEC25FE62EBDD1D600EC8A3D /* WidgetKit.framework */; };
+		BEC25FE92EBDD1D700EC8A3D /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEC25FE82EBDD1D700EC8A3D /* SwiftUI.framework */; };
+		BEC25FF82EBDD1DA00EC8A3D /* ProcastinoteWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = BEC25FE42EBDD1D600EC8A3D /* ProcastinoteWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BEC25FF62EBDD1DA00EC8A3D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BEADE6D42E9C687B00BD0B55 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BEC25FE32EBDD1D600EC8A3D;
+			remoteInfo = ProcastinoteWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BEC25FFD2EBDD1DA00EC8A3D /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BEC25FF82EBDD1DA00EC8A3D /* ProcastinoteWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		BEADE6DC2E9C687B00BD0B55 /* Midterm1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Midterm1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEADE6DC2E9C687B00BD0B55 /* Procastinote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Procastinote.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEC25FE42EBDD1D600EC8A3D /* ProcastinoteWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ProcastinoteWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEC25FE62EBDD1D600EC8A3D /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		BEC25FE82EBDD1D700EC8A3D /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		BEC25FFE2EBDD3C300EC8A3D /* ProcastinoteWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProcastinoteWidgetExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		BEC25FF92EBDD1DA00EC8A3D /* Exceptions for "ProcastinoteWidget" folder in "ProcastinoteWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = BEC25FE32EBDD1D600EC8A3D /* ProcastinoteWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		BEADE6DE2E9C687B00BD0B55 /* Midterm1 */ = {
+		BEADE6DE2E9C687B00BD0B55 /* Procastinote */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Midterm1;
+			path = Procastinote;
+			sourceTree = "<group>";
+		};
+		BEC25FEA2EBDD1D700EC8A3D /* ProcastinoteWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				BEC25FF92EBDD1DA00EC8A3D /* Exceptions for "ProcastinoteWidget" folder in "ProcastinoteWidgetExtension" target */,
+			);
+			path = ProcastinoteWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,13 +78,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BEC25FE12EBDD1D600EC8A3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEC25FE92EBDD1D700EC8A3D /* SwiftUI.framework in Frameworks */,
+				BEC25FE72EBDD1D700EC8A3D /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		BEADE6D32E9C687B00BD0B55 = {
 			isa = PBXGroup;
 			children = (
-				BEADE6DE2E9C687B00BD0B55 /* Midterm1 */,
+				BEC25FFE2EBDD3C300EC8A3D /* ProcastinoteWidgetExtension.entitlements */,
+				BEADE6DE2E9C687B00BD0B55 /* Procastinote */,
+				BEC25FEA2EBDD1D700EC8A3D /* ProcastinoteWidget */,
+				BEC25FE52EBDD1D600EC8A3D /* Frameworks */,
 				BEADE6DD2E9C687B00BD0B55 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -40,35 +104,69 @@
 		BEADE6DD2E9C687B00BD0B55 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BEADE6DC2E9C687B00BD0B55 /* Midterm1.app */,
+				BEADE6DC2E9C687B00BD0B55 /* Procastinote.app */,
+				BEC25FE42EBDD1D600EC8A3D /* ProcastinoteWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		BEC25FE52EBDD1D600EC8A3D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BEC25FE62EBDD1D600EC8A3D /* WidgetKit.framework */,
+				BEC25FE82EBDD1D700EC8A3D /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BEADE6DB2E9C687B00BD0B55 /* Midterm1 */ = {
+		BEADE6DB2E9C687B00BD0B55 /* Procastinote */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BEADE6E92E9C687D00BD0B55 /* Build configuration list for PBXNativeTarget "Midterm1" */;
+			buildConfigurationList = BEADE6E92E9C687D00BD0B55 /* Build configuration list for PBXNativeTarget "Procastinote" */;
 			buildPhases = (
 				BEADE6D82E9C687B00BD0B55 /* Sources */,
 				BEADE6D92E9C687B00BD0B55 /* Frameworks */,
 				BEADE6DA2E9C687B00BD0B55 /* Resources */,
+				BEC25FFD2EBDD1DA00EC8A3D /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BEC25FF72EBDD1DA00EC8A3D /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				BEADE6DE2E9C687B00BD0B55 /* Procastinote */,
+			);
+			name = Procastinote;
+			packageProductDependencies = (
+			);
+			productName = Midterm1;
+			productReference = BEADE6DC2E9C687B00BD0B55 /* Procastinote.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BEC25FE32EBDD1D600EC8A3D /* ProcastinoteWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEC25FFA2EBDD1DA00EC8A3D /* Build configuration list for PBXNativeTarget "ProcastinoteWidgetExtension" */;
+			buildPhases = (
+				BEC25FE02EBDD1D600EC8A3D /* Sources */,
+				BEC25FE12EBDD1D600EC8A3D /* Frameworks */,
+				BEC25FE22EBDD1D600EC8A3D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				BEADE6DE2E9C687B00BD0B55 /* Midterm1 */,
+				BEC25FEA2EBDD1D700EC8A3D /* ProcastinoteWidget */,
 			);
-			name = Midterm1;
+			name = ProcastinoteWidgetExtension;
 			packageProductDependencies = (
 			);
-			productName = Midterm1;
-			productReference = BEADE6DC2E9C687B00BD0B55 /* Midterm1.app */;
-			productType = "com.apple.product-type.application";
+			productName = ProcastinoteWidgetExtension;
+			productReference = BEC25FE42EBDD1D600EC8A3D /* ProcastinoteWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -83,9 +181,12 @@
 					BEADE6DB2E9C687B00BD0B55 = {
 						CreatedOnToolsVersion = 26.0.1;
 					};
+					BEC25FE32EBDD1D600EC8A3D = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
 				};
 			};
-			buildConfigurationList = BEADE6D72E9C687B00BD0B55 /* Build configuration list for PBXProject "Midterm1" */;
+			buildConfigurationList = BEADE6D72E9C687B00BD0B55 /* Build configuration list for PBXProject "Procastinote" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -99,13 +200,21 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BEADE6DB2E9C687B00BD0B55 /* Midterm1 */,
+				BEADE6DB2E9C687B00BD0B55 /* Procastinote */,
+				BEC25FE32EBDD1D600EC8A3D /* ProcastinoteWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		BEADE6DA2E9C687B00BD0B55 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEC25FE22EBDD1D600EC8A3D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +231,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BEC25FE02EBDD1D600EC8A3D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BEC25FF72EBDD1DA00EC8A3D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BEC25FE32EBDD1D600EC8A3D /* ProcastinoteWidgetExtension */;
+			targetProxy = BEC25FF62EBDD1DA00EC8A3D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		BEADE6E72E9C687D00BD0B55 /* Debug */ = {
@@ -251,11 +375,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Procastinote/Procastinote.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9S67Y6QRQ2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSCalendarsFullAccessUsageDescription = "This app needs access to Calendar to add events.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -267,9 +394,12 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.devnumber7.Midterm1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.devnumber7.procastinote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -284,11 +414,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Procastinote/Procastinote.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9S67Y6QRQ2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSCalendarsFullAccessUsageDescription = "This app needs access to Calendar to add events.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -300,11 +433,76 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.devnumber7.Midterm1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.devnumber7.procastinote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BEC25FFB2EBDD1DA00EC8A3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = ProcastinoteWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9S67Y6QRQ2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ProcastinoteWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ProcastinoteWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.devnumber7.procastinote.ProcastinoteWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BEC25FFC2EBDD1DA00EC8A3D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = ProcastinoteWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9S67Y6QRQ2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ProcastinoteWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ProcastinoteWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.devnumber7.procastinote.ProcastinoteWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
@@ -315,7 +513,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BEADE6D72E9C687B00BD0B55 /* Build configuration list for PBXProject "Midterm1" */ = {
+		BEADE6D72E9C687B00BD0B55 /* Build configuration list for PBXProject "Procastinote" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BEADE6E72E9C687D00BD0B55 /* Debug */,
@@ -324,11 +522,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BEADE6E92E9C687D00BD0B55 /* Build configuration list for PBXNativeTarget "Midterm1" */ = {
+		BEADE6E92E9C687D00BD0B55 /* Build configuration list for PBXNativeTarget "Procastinote" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BEADE6EA2E9C687D00BD0B55 /* Debug */,
 				BEADE6EB2E9C687D00BD0B55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEC25FFA2EBDD1DA00EC8A3D /* Build configuration list for PBXNativeTarget "ProcastinoteWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEC25FFB2EBDD1DA00EC8A3D /* Debug */,
+				BEC25FFC2EBDD1DA00EC8A3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
